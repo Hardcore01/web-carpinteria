@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: labrada;
+    src: url(/Sofia_Sans_Condensed/SofiaSansCondensed-Italic-VariableFont_wght.ttf)
+    url(/Labrada/Labrada-Italic-VariableFont_wght.ttf),
+    url(/Labrada/Labrada-VariableFont_wght.ttf);
+}
+@font-face{
+    font-family: sofia;
+    src:url(/Labrada/Labrada-Italic-VariableFont_wght.ttf),    
+    url(/Sofia_Sans_Condensed/SofiaSansCondensed-Italic-VariableFont_wght.ttf);
+}
+
+/*------------______HEADER______-------------*/
+header{
+    position: sticky;
+    top: 0px;
+}
+.menu{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3); 
+    background: linear-gradient(to right, #2ebf91, #8360c3); 
+}
+.menu__perfil{
+    width: 20vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.menu__bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
+    display: none;
+}
+.menu__imgbar{
+    width: 30px;
+    height: 30px;
+}
+.menu__input{
+    display: none;
+}
+
+.menu__enlaces{
+    width: 80vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__link{
+    text-decoration: none;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: labrada;
+    color: white;
+}
+.active, .menu__link:hover{
+    margin-top: -15px;
+    font-size: 18px;
+    border-bottom:2px rgb(61, 73, 73) solid ;
+    text-shadow: 0px 0px 15px rgb(206, 218, 184);
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    background-color: rgb(236, 239, 239);
+    border-radius: 6px;
+    padding: 4px;
+    font-weight: 800;
+}
+
+/*--------------------------_____MAIN_____---------------------------------*/
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    place-items: center;
+    gap: 30px;
+    padding: 20px 0px; 
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+}
+.card{
+    width: 270px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 23px 53px;
+    box-shadow: 0px 2px 15px rgba(92, 92, 83, 0.8);
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  
+    background: linear-gradient(to right, #78ffd6, #a8ff78); 
+}
+.card_img{
+    min-width: 100%;
+    min-height: 370px;
+    border-radius: 20px 50px 0px 0px;
+}
+.card_titulo{
+    min-width: 70%;
+    height: 23px;
+    padding: 2px 0px;
+    margin: 0px 25px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sofia;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #0f0c29;
+    color: white;
+    border-radius: 120px 70px;
+}
+.card_info{
+    min-width: 100%;
+    min-height: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0px 0px 0px 30px;
+    font-family:sofia;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+
+
+/*--------______FOOTER____------------*/
+footer{
+    width: 100vw; 
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3); 
+    background: linear-gradient(to right, #eaafc8, #654ea3); 
+
+}
+.contactos{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: #101010 1px solid;
+}
+.contactos__titulo{
+    font-family: labrada;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.contactos__wat{
+    width: 30px;
+}
+.contactos__wat:hover{
+    width: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 20px 15px rgb(23, 238, 23) inset;
+    transition: .3s;
+}
+.contactos__msg{
+    width: 30px;
+}
+.contactos__msg:hover{
+    width: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 20px 15px rgb(46, 136, 239) inset;
+    transition: .3s;
+}
+.contactos__user{
+    width: 30px;
+}
+
+.contactos__nombre{
+    font-family: labrada;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+
+
+/*++++++++++___MEDIA QUERY___+++++++++++++*/
+
+@media screen and (max-width: 800px){
+    
+    .menu__bar{
+        display: block;
+        cursor: pointer;
+        display: flex;
+    }
+    .menu__enlaces{
+        width: 200px;
+        height: 400px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius: 0px 0px 0px 8px;
+        top: 60px;
+        right: -220px;
+        transform: all .9s;
+    }
+    
+    #check:checked ~ .menu__enlaces{
+        right: 0;
+    }
+    
+}
+
+/*+++++MEDIA QUERY MOVIL++++++*/
+@media screen and (max-width:320px) {
+
+    .menu__bar{
+        display: block;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .menu{
+        width: 100vw;
+    }
+    .menu__perfil{
+        width: 20%;
+    }
+    .card{
+        width: 260px;
+        height: 440px; 
+    }
+    .card_img{
+        min-height: 360px;
+    }
+    .card_titulo{
+        font-size: 13px;
+    }
+
+    .contactos__titulo{
+        font-size: 11px;
+    }
+    .contactos__wat{
+        width: 20px;
+        transition: .4s;
+    }
+    .contactos__msg{
+        width: 20px;
+        transition: .4s;
+    }
+    .contactos__user{
+        width: 20px;
+        transition: .4;
+    }
+    .contactos__nombre{
+        font-size: 11px;
+    }
+    .contactos__wat:hover{
+        width: 30px;
+    }
+    .contactos__msg:hover{
+        width: 30px;
+    }
+}
